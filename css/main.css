@@ -1,0 +1,83 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.ghost {
+  transform: translateX(0);
+  animation: slide 1s infinite linear alternate;
+}
+
+@keyframes slide {
+
+  0% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.veggies {
+  margin: 0 auto;
+  max-width: 45em;
+  padding: 0 1em;
+  opacity: 0;
+  transition: all 200ms ease-in;
+}
+
+.js-veggies-animate {
+  opacity: 1;
+  animation: veggies-jiggle 250ms linear;
+}
+
+@keyframes veggies-jiggle {
+
+  0% {
+    transform: rotate(0);
+  }
+
+  33% {
+    transform: rotate(15deg);
+  }
+
+  66% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+div {
+  background-color: white;
+  transition: all .5s linear;
+}
+
+.is-clicked {
+  background-color: #fc6;
+}
