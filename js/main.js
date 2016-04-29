@@ -11,9 +11,3 @@ $veggies.waypoint(function (direction) {
 $('div').on('click', function (e) {
   $(this).toggleClass('is-clicked');
 });
-
-dfasdfas
-aadsdas
-adaSDsd
-fsadfasdfasdfasdfa
-fasdfa
